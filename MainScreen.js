@@ -21,7 +21,7 @@ const MainContents = () => {
     const [ctRed, setCtRed] = useState(0);
     const [ctBlack, setCtBlack] = useState(0);
     const [weekCal, setWeekCal] = useState(0);
-    const [calLimit, setCalLimit] = useState(2700);
+    const [calLimit, setCalLimit] = useState(2000);
     const [markedDates, setMarkedDates] = useState([]);
     const [markedDatesObj, setMarkedDatesObj] = useState(null);
     const [calLimitColor, setcalLimitColor] = useState('black');
@@ -191,7 +191,7 @@ const MainContents = () => {
             
             <View style={styles.weekdivider} />
             <View>
-            <Text style={{ fontSize: 22, fontWeight: 'bold', textAlign: 'center', color: calLimitColor }}>2700 kcal</Text>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', textAlign: 'center', color: calLimitColor }}>{calLimit} kcal</Text>
             <Text style={styles.miniText}>recommended</Text>
             </View>
         </View>

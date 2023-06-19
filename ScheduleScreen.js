@@ -61,31 +61,7 @@ const ScheduleCalendar = () => {
   }, [calorie]);
  
 
-  const CreateButton = () => {
-    return Alcohols.data.map(function(alcohol) {
-      return (
-        <TouchableOpacity
-          key={alcohol.name}
-          onPress={() => handleSelectAlcohol(alcohol.img, alcohol.name, alcohol.calorie)}
-          style={styles.alcoholButtonContainer}
-        >
-          <Image
-            style={{
-              width: 100,
-              height: 100,
-              borderRadius: 30,
-              overflow: 'visible',
-              borderWidth: 2,
-              borderColor: 'gray',
-              backgroundColor: 'white'
-            }}
-            source={alcohol.img}
-          />
-          <Text style={styles.buttonTextB}>{alcohol.name}</Text>
-        </TouchableOpacity>
-      );
-    });
-  };
+  
 
   
 
@@ -279,7 +255,31 @@ const ScheduleCalendar = () => {
 
   
 
-
+  const CreateButton = () => {
+    return Alcohols.data.map(function(alcohol) {
+      return (
+        <TouchableOpacity
+          key={alcohol.name}
+          onPress={() => handleSelectAlcohol(alcohol.img, alcohol.name, alcohol.calorie)}
+          style={styles.alcoholButtonContainer}
+        >
+          <Image
+            style={{
+              width: 100,
+              height: 100,
+              borderRadius: 30,
+              overflow: 'visible',
+              borderWidth: 2,
+              borderColor: 'gray',
+              backgroundColor: 'white'
+            }}
+            source={alcohol.img}
+          />
+          <Text style={styles.buttonTextB}>{alcohol.name}</Text>
+        </TouchableOpacity>
+      );
+    });
+  };
   
 
   return (
